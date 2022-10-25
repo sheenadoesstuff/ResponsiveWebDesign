@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>freeCodeCamp Survey Form</title>
+  </head>
+  <body>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description">
+      Thank you for taking the time to help us improve the platform
+    </p>
+    <form action="#" id="survey-form">
+      <fieldset>
+        <label for="name" id="name-label"
+          >Name
+          <input type="text" id="name" placeholder="Enter your name" required />
+        </label>
+        <label for="email" id="email-label"
+          >Email
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+        </label>
+        <label for="number" id="number-label">
+          Age (optional)
+          <input
+            type="number"
+            id="number"
+            placeholder="Age"
+            min="10"
+            max="120"
+          />
+        </label>
+        <label for="dropdown" id="dropdown-label"
+          >Which option best describes your current role?
+          <select name="dropdown" id="dropdown">
+            <option value="">Select current role</option>
+            <option value="1">Student</option>
+            <option value="2">Full-time job</option>
+            <option value="3">Full-time learner</option>
+            <option value="4">Prefer not to say</option>
+            <option value="5">Other</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Would you recommend freeCodeCamp to a friend?</legend>
+
+        <label class="first-choice" for="definitely"
+          ><input
+            class="inline"
+            type="radio"
+            name="recommendation"
+            id="definitely"
+            value="1"
+            checked
+          />
+          Definitely</label
+        >
+
+        <label class="inline" for="maybe"
+          ><input
+            class="inline"
+            type="radio"
+            name="recommendation"
+            id="maybe"
+            value="2"
+          />
+          Maybe</label
+        >
+
+        <label for="not-sure"
+          ><input
+            class="inline"
+            type="radio"
+            name="recommendation"
+            id="not-sure"
+            value="3"
+          />
+          Not sure</label
+        >
+      </fieldset>
+
+      <fieldset>
+        <legend>
+          What would you like to see improved? (Check all that apply)
+        </legend>
+
+        <label class="first-choice" for="projects"
+          ><input
+            class="inline"
+            type="checkbox"
+            name="projects"
+            id="projects"
+            value="1"
+          />
+          Projects</label
+        >
+
+        <label for="challenges"
+          ><input
+            class="inline"
+            type="checkbox"
+            name="challenges"
+            id="challenges"
+            value="2"
+          />
+          Challenges</label
+        >
+
+        <label or="videos"
+          ><input
+            class="inline"
+            type="checkbox"
+            name="videos"
+            id="videos"
+            value="3"
+          />
+          Videos</label
+        >
+
+        <label for="forum"
+          ><input
+            class="inline"
+            type="checkbox"
+            name="forum"
+            id="forum"
+            value="4"
+          />
+          Forum</label
+        >
+
+        <label for="courses"
+          ><input
+            class="inline"
+            type="checkbox"
+            name="courses"
+            id="courses"
+            value="5"
+          />
+          Courses</label
+        >
+      </fieldset>
+      <fieldset>
+        <label for="comments"> Any comments or suggestions?</label>
+        <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+      </fieldset>
+
+      <input id="submit" type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
