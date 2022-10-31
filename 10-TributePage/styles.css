@@ -1,0 +1,44 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(198, 207, 216);
+}
+
+#title,
+h3 {
+  text-align: center;
+}
+
+#description {
+  text-align: center;
+  font-style: italic;
+  width: 80%;
+  margin: 0 auto;
+}
+#img-div {
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+}
+#image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+#img-caption {
+  line-height: 1.5em;
+}
+
+#tribute-info li {
+  width: 80%;
+  margin: 1.5em auto;
+}
+
+.year {
+  font-weight: 700;
+}
+
+blockquote {
+  font-style: italic;
+}
