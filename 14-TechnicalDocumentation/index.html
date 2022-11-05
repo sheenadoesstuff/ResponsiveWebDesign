@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHP Manual</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header><h1>PHP Manual</h1></header>
+      <ul>
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li>
+          <a class="nav-link" href="#What_can_PHP_do">What can PHP do</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#A_simple_tutorial">A simple tutorial</a>
+        </li>
+        <li><a class="nav-link" href="#What_do_I_need">What do I need</a></li>
+        <li>
+          <a class="nav-link" href="#Your_first_PHP-enabled_page"
+            >Your first PHP-enabled page</a
+          >
+        </li>
+        <li><a class="nav-link" href="#Whats_next">Whats next</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header><h2>Introduction</h2></header>
+        <h3>Introduction</h3>
+        <p>
+          PHP (recursive acronym for PHP: <code>Hypertext Preprocessor</code>)
+          is a widely-used open source general-purpose scripting language that
+          is especially suited for web development and can be embedded into
+          HTML.
+        </p>
+        <p>Nice, but what does that mean? An example:</p>
+        <p>Example #1 An introductory example</p>
+        <code> &lt;?php echo "Hi, I'm a PHP script!"; ?&gt; </code>
+
+        <p>
+          Instead of lots of commands to output HTML (as seen in C or Perl), PHP
+          pages contain HTML with embedded code that does "something" (in this
+          case, output "Hi, I'm a PHP script!"). The PHP code is enclosed in
+          special start and end processing instructions
+          <code>&lt;?php and ?&gt;</code> that allow you to jump into and out of
+          "PHP mode."
+        </p>
+        <p>
+          What distinguishes PHP from something like client-side JavaScript is
+          that the code is executed on the server, generating HTML which is then
+          sent to the client. The client would receive the results of running
+          that script, but would not know what the underlying code was. You can
+          even configure your web server to process all your HTML files with
+          PHP, and then there's really no way that users can tell what you have
+          up your sleeve.
+        </p>
+        <p>
+          The best part about using PHP is that it is extremely simple for a
+          newcomer, but offers many advanced features for a professional
+          programmer. Don't be afraid to read the long list of PHP's features.
+          You can jump in, in a short time, and start writing simple scripts in
+          a few hours.
+        </p>
+        <p>
+          Although PHP's development is focused on server-side scripting, you
+          can do much more with it. Read on, and see more in the What can PHP
+          do? section, or go right to the introductory tutorial if you are only
+          interested in web programming.
+        </p>
+      </section>
+      <section class="main-section" id="What_can_PHP_do">
+        <header><h2>What can PHP do</h2></header>
+        <p>
+          Anything. PHP is mainly focused on server-side scripting, so you can
+          do anything any other CGI program can do, such as collect form data,
+          generate dynamic page content, or send and receive cookies. But PHP
+          can do much more.
+        </p>
+
+        <p>There are three main areas where PHP scripts are used.</p>
+        <ul>
+          <li>
+            Server-side scripting. This is the most traditional and main target
+            field for PHP. You need three things to make this work: the PHP
+            parser (CGI or server module), a web server and a web browser. You
+            need to run the web server, with a connected PHP installation. You
+            can access the PHP program output with a web browser, viewing the
+            PHP page through the server. All these can run on your home machine
+            if you are just experimenting with PHP programming. See the
+            installation instructions section for more information.
+          </li>
+          <li>
+            Command line scripting. You can make a PHP script to run it without
+            any server or browser. You only need the PHP parser to use it this
+            way. This type of usage is ideal for scripts regularly executed
+            using cron (on *nix or Linux) or Task Scheduler (on Windows). These
+            scripts can also be used for simple text processing tasks. See the
+            section about Command line usage of PHP for more information.
+          </li>
+          <li>
+            Writing desktop applications. PHP is probably not the very best
+            language to create a desktop application with a graphical user
+            interface, but if you know PHP very well, and would like to use some
+            advanced PHP features in your client-side applications you can also
+            use PHP-GTK to write such programs. You also have the ability to
+            write cross-platform applications this way. PHP-GTK is an extension
+            to PHP, not available in the main distribution. If you are
+            interested in PHP-GTK, visit » its own website.
+          </li>
+        </ul>
+        <p>
+          PHP can be used on all major operating systems, including Linux, many
+          Unix variants (including HP-UX, Solaris and OpenBSD), Microsoft
+          Windows, macOS, RISC OS, and probably others. PHP also has support for
+          most of the web servers today. This includes Apache, IIS, and many
+          others. And this includes any web server that can utilize the FastCGI
+          PHP binary, like lighttpd and nginx. PHP works as either a module, or
+          as a CGI processor.
+        </p>
+        <p>
+          So with PHP, you have the freedom of choosing an operating system and
+          a web server. Furthermore, you also have the choice of using
+          procedural programming or object-oriented programming (OOP), or a
+          mixture of them both.
+        </p>
+        <p>
+          With PHP you are not limited to output HTML. PHP's abilities includes
+          outputting images, PDF files and even Flash movies (using libswf and
+          Ming) generated on the fly. You can also output easily any text, such
+          as XHTML and any other XML file. PHP can autogenerate these files, and
+          save them in the file system, instead of printing it out, forming a
+          server-side cache for your dynamic content.
+        </p>
+        <p>
+          One of the strongest and most significant features in PHP is its
+          support for a wide range of databases. Writing a database-enabled web
+          page is incredibly simple using one of the database specific
+          extensions (e.g., for mysql), or using an abstraction layer like PDO,
+          or connect to any database supporting the Open Database Connection
+          standard via the ODBC extension. Other databases may utilize cURL or
+          sockets, like CouchDB.
+        </p>
+        <p>
+          PHP also has support for talking to other services using protocols
+          such as LDAP, IMAP, SNMP, NNTP, POP3, HTTP, COM (on Windows) and
+          countless others. You can also open raw network sockets and interact
+          using any other protocol. PHP has support for the WDDX complex data
+          exchange between virtually all Web programming languages. Talking
+          about interconnection, PHP has support for instantiation of Java
+          objects and using them transparently as PHP objects.
+        </p>
+        <p>
+          PHP has useful text processing features, which includes the Perl
+          compatible regular expressions (PCRE), and many extensions and tools
+          to parse and access XML documents. PHP standardizes all of the XML
+          extensions on the solid base of libxml2, and extends the feature set
+          adding SimpleXML, XMLReader and XMLWriter support.
+        </p>
+        <p>
+          And many other interesting extensions exist, which are categorized
+          both alphabetically and by category. And there are additional PECL
+          extensions that may or may not be documented within the PHP manual
+          itself, like » XDebug.
+        </p>
+        <p>
+          As you can see this page is not enough to list all the features and
+          benefits PHP can offer. Read on in the sections about installing PHP,
+          and see the function reference part for explanation of the extensions
+          mentioned here.
+        </p>
+      </section>
+      <section class="main-section" id="A_simple_tutorial">
+        <header><h2>A simple tutorial</h2></header>
+        <h3>Table of contents</h3>
+        <ul>
+          <li>What do I need?</li>
+          <li>Your PHP-enabled page</li>
+          <li>What's next?</li>
+        </ul>
+        <p>
+          Here we would like to show the very basics of PHP in a short, simple
+          tutorial. This text only deals with dynamic web page creation with
+          PHP, though PHP is not only capable of creating web pages. See the
+          section titled What can PHP do for more information.
+        </p>
+        <p>
+          PHP-enabled web pages are treated just like regular HTML pages and you
+          can create and edit them the same way you normally create regular HTML
+          pages.
+        </p>
+      </section>
+      <section class="main-section" id="What_do_I_need">
+        <header><h2>What do I need</h2></header>
+        <p>
+          In this tutorial we assume that your server has activated support for
+          PHP and that all files ending in .php are handled by PHP. On most
+          servers, this is the default extension for PHP files, but ask your
+          server administrator to be sure. If your server supports PHP, then you
+          do not need to do anything. Just create your .php files, put them in
+          your web directory and the server will automatically parse them for
+          you. There is no need to compile anything nor do you need to install
+          any extra tools. Think of these PHP-enabled files as simple HTML files
+          with a whole new family of magical tags that let you do all sorts of
+          things.
+        </p>
+        <p>
+          Let us say you want to save precious bandwidth and develop locally. In
+          this case, you will want to install a web server, such as » Apache,
+          and of course » PHP. You will most likely want to install a database
+          as well, such as » MySQL.
+        </p>
+        <p>
+          You can either install these individually or choose a simpler way. Our
+          manual has installation instructions for PHP (assuming you already
+          have some web server set up). If you have problems with installing PHP
+          yourself, we would suggest you ask your questions on our »
+          installation mailing list. If you choose to go on the simpler route,
+          then » locate a pre-configured package for your operating system,
+          which automatically installs all of these with just a few mouse
+          clicks. It is easy to setup a web server with PHP support on any
+          operating system, including MacOSX, Linux and Windows. On Linux, you
+          may find » rpmfind and » PBone helpful for locating RPMs. You may also
+          want to visit » apt-get to find packages for Debian.
+        </p>
+      </section>
+      <section class="main-section" id="Your_first_PHP-enabled_page">
+        <header><h2>Your first PHP-enabled page</h2></header>
+        <p>
+          Create a file named hello.php and put it in your web server's root
+          directory (<code>DOCUMENT_ROOT</code>) with the following content:
+        </p>
+        <pre>
+          <code>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;PHP Test &lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    <span class="php-code">&lt;?php echo ' &lt;p&gt;Hello World &lt;/p&gt;'; ?&gt;</span> 
+  &lt;/body&gt;
+&lt;/html&gt;
+        </code>
+      </pre>
+        <p>
+          Use your browser to access the file with your web server's URL, ending
+          with the /hello.php file reference. When developing locally this URL
+          will be something like http://localhost/hello.php or
+          http://127.0.0.1/hello.php but this depends on the web server's
+          configuration. If everything is configured correctly, this file will
+          be parsed by PHP and the following output will be sent to your
+          browser:
+        </p>
+        <pre><code>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;PHP Test&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;Hello World&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+        </code></pre>
+        <p>
+          This program is extremely simple and you really did not need to use
+          PHP to create a page like this. All it does is display: Hello World
+          using the PHP echo statement. Note that the file does not need to be
+          executable or special in any way. The server finds out that this file
+          needs to be interpreted by PHP because you used the ".php" extension,
+          which the server is configured to pass on to PHP. Think of this as a
+          normal HTML file which happens to have a set of special tags available
+          to you that do a lot of interesting things.
+        </p>
+        <p>
+          If you tried this example and it did not output anything, it prompted
+          for download, or you see the whole file as text, chances are that the
+          server you are on does not have PHP enabled, or is not configured
+          properly. Ask your administrator to enable it for you using the
+          Installation chapter of the manual. If you are developing locally,
+          also read the installation chapter to make sure everything is
+          configured properly. Make sure that you access the file via http with
+          the server providing you the output. If you just call up the file from
+          your file system, then it will not be parsed by PHP. If the problems
+          persist anyway, do not hesitate to use one of the many » PHP support
+          options.
+        </p>
+        <p>
+          The point of the example is to show the special PHP tag format. In
+          this example we used
+          <code>&lt;?php</code> to indicate the start of a PHP tag. Then we put
+          the PHP statement and left PHP mode by adding the closing tag,<code>
+            ?&gt;</code
+          >. You may jump in and out of PHP mode in an HTML file like this
+          anywhere you want. For more details, read the manual section on the
+          basic PHP syntax.
+        </p>
+      </section>
+      <section class="main-section" id="Whats_next">
+        <header><h2>Whats next</h2></header>
+        <p>
+          With your new knowledge you should be able to understand most of the
+          manual and also the various example scripts available in the example
+          archives.
+        </p>
+        <p>
+          To view various slide presentations that show more of what PHP can do,
+          see the PHP Conference Material Site:
+          <a href="http://http://talks.php.net/">» http://talks.php.net/</a>
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+}
+
+#navbar {
+  /* height: 100%; */
+  width: 20%;
+}
+#navbar > ul {
+  padding: 0;
+}
+#navbar > ul > li {
+  list-style: none;
+  padding: 1em 0.5em;
+}
+#navbar a {
+  text-decoration: none;
+}
+#main-doc {
+  width: 70%;
+}
+
+@media (max-width: 796px) {
+  body {
+    display: block;
+  }
+  #navbar {
+    width: 100%;
+  }
+
+  #navbar > ul > li {
+    padding: 0.25em 0.5em;
+  }
+  #main-doc {
+    width: 100%;
+  }
+}
