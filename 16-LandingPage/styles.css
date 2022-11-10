@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Fira Code", sans-serif;
+  width: 100%;
+  background-color: aliceblue;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  background-color: slategray;
+  padding-left: 5px;
+  color: fff;
+  height: 5em;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#header img {
+  width: 30px;
+  object-fit: contain;
+}
+#header h1 {
+  margin: 0;
+}
+#header-gap {
+  width: 50%;
+}
+#nav-bar {
+  width: 30%;
+  position: fixed;
+  top: 30px;
+  right: 0;
+  /* position: absolute; */
+  /* float: top; */
+}
+
+#nav-bar ul {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 25px;
+  margin: 0;
+  /* padding: 0; */
+}
+
+#nav-bar li {
+  list-style: none;
+}
+
+#nav-bar a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 30px;
+  background-color: #fff;
+}
+#form {
+  width: 100%;
+  text-align: center;
+  /* margin: 0 auto; */
+}
+#catchphrase,
+#email,
+#submit {
+  display: block;
+  margin: 0 auto;
+}
+
+#catchphrase {
+  padding-bottom: 0.5em;
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+#email {
+  /* height: 2.5em; */
+  font-size: 1.2em;
+  font-family: "Fira code", sans-serif;
+  padding: 0.2em 0.3em;
+  margin-bottom: 1em;
+}
+
+#submit {
+  background-color: slategray;
+  font-size: 1.25em;
+  color: #fff;
+  padding: 0.5em;
+  width: 30%;
+  text-transform: uppercase;
+  border: none;
+  margin-bottom: 1.5em;
+}
+
+@media (max-width: 769px) {
+  #header-gap {
+    width: 0;
+  }
+}
